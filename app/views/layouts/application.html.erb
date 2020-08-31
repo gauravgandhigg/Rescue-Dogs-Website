@@ -13,7 +13,7 @@
     
     <div id ="banner">
       <%= image_tag("logo.png")%>
-      <%= @page_title || "Our Dogs"%>
+      <%= @page_title || "Rescue Dogs for adoption"%>
     </div>
     <br>
     <br>
@@ -27,17 +27,17 @@
       </div>
       <% if session[:user_id] %>  
       <ul>           
-      <li><%= link_to 'Orders',   orders_path   %></li>          
-      <li><%= link_to 'Products', products_path %></li>          
+      <li><%= link_to 'Previous adoptions',   orders_path   %></li>          
+      <li><%= link_to 'See All Dogs', products_path %></li>          
       <li><%= link_to 'Users',    users_path    %></li>        
       </ul>  
       <%= button_to 'Logout', logout_path, method: :delete   %>       
       <% end %> 
-      
 
     </div>
 
     <div id= "main">
+      
        <%= yield %>
     </div>
    </div>
